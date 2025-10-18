@@ -6,7 +6,7 @@ import birthday from "../assets/Birthday_gifts.jpg";
 import holiday from "../assets/Holiday_gifts.jpg";
 import aniversary from "../assets/Aniversary_gifts.jpg";
 import personalized from "../assets/Personalized_gifts.jpg";
-import leaves from "../assets/leaves.png";
+// import leaves from "../assets/leaves.png";
 import Card from "../components/Card";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ export default function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active containter-fluid ">
             <div className="row poition-realtive">
-              <img src={leaves} alt="leaves" className="leaves-bg " />
+              {/* <img src={leaves} alt="leaves" className="leaves-bg " /> */}
 
               <div className="col-lg-5 col-md-6 col-sm-12 a">
                 <div className="content1 ">
