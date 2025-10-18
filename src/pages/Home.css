@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.slide1 {
+  /* margin-left: 40vw; */
+  /* margin-top: 15vh; */
+  width: 30vw;
+}
+.slide2 {
+  height: 95vh;
+  width: 100vw;
+}
+.a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.content1 {
+  line-height: 4vh;
+  margin-top: 20vh;
+  margin-left: 5vw;
+}
+.content1 h1 {
+  font-size: 7vh;
+}
+.content1 p {
+  font-size: 3vh;
+}
+
+.left {
+  transition: 1s ease;
+}
+@media (max-width: 767px) {
+  .img {
+    margin-left: 25vw;
+    width: 60vw;
+    margin-top: 8vh;
+  }
+}
+@media (min-width: 767px) {
+  .img {
+    width: 50vw;
+    margin-top: 20vh;
+  }
+}
+.shop {
+  height: 6vh;
+  margin-top: 5vh;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  z-index: 1; /* ensures stacking context */
+}
+
+.shop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #dcbfb2;
+  z-index: -1; /* 👈 move behind text */
+  transition: height 0.4s ease;
+  border-radius: 6px;
+}
+
+.shop:hover::before {
+  height: 100%;
+}
+
+.shop:hover {
+  color: white;
+}
+
+.shop span {
+  position: relative;
+  z-index: 2; /* optional, just ensures it's above */
+}
+/* Leaves background */
+.leaves-bg {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: 600px;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  z-index: 1; /* behind banner image */
+  pointer-events: none;
+  animation: floatLeaves 5s ease-in-out infinite;
+}
+
+/* Ensure banner image is above leaves */
+.img1 {
+  position: relative;
+  z-index: 2;
+}
+
+.content1 {
+  position: relative;
+  z-index: 3;
+}
+
+/* Optional subtle floating animation */
+@keyframes floatLeaves {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-55%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.left {
+  animation: left1 2s;
+}
+.leftD{
+  animation: left2 1.5s;
+}
+.top{
+  animation: top 1s;
+}
+.right{
+  animation: right1 2s;
+}
+@keyframes left1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes right1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes left2 {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes top {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

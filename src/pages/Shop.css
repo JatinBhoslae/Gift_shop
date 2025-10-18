@@ -1,0 +1,158 @@
+/* Shop Page Layout */
+.shop-page {
+  display: flex;
+  background: #fff;
+  padding: 2.5rem 3rem;
+  gap: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.shop-sidebar {
+  width: 250px;
+  border-right: 1px solid #eee;
+  padding-right: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 0.75rem;
+}
+
+.category-list input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #ff7f7f;
+  transform: scale(1.1);
+}
+
+.category-list label {
+  cursor: pointer;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.price-filter {
+  margin-top: 2rem;
+}
+
+.price-filter h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.price-filter input[type="range"] {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Products Section */
+.shop-products {
+  flex: 1;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  min-height: 350px; /* fixed height for all cards */
+  box-sizing: border-box;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper */
+.product-img-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+  min-height: 60px;
+  margin-top: 1rem;
+}
+
+.product-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #111;
+  font-weight: 600;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* No Products Message */
+.no-products {
+  text-align: center;
+  color: #777;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+/* Wrap both sections vertically */
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* Ensure MainProducts appears below */
+.main-products-section {
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,121 @@
+import React from "react";
+import "./Home.css";
+import banner1 from "../assets/slider1.png";
+import banner2 from "../assets/slider2.jpg";
+import birthday from "../assets/Birthday_gifts.jpg";
+import holiday from "../assets/Holiday_gifts.jpg";
+import aniversary from "../assets/Aniversary_gifts.jpg";
+import personalized from "../assets/Personalized_gifts.jpg";
+import leaves from "../assets/leaves.png";
+import Card from "../components/Card";
+import { Link } from "react-router-dom";
+
+export default function Home() {
+  return (
+    <div>
+      <div
+        id="carouselExample"
+        className="carousel slide"
+        style={{ backgroundColor: "rgba(236,202,193,0.7)", height: "100vh" }}
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active containter-fluid ">
+            <div className="row poition-realtive">
+              <img src={leaves} alt="leaves" className="leaves-bg " />
+
+              <div className="col-lg-5 col-md-6 col-sm-12 a">
+                <div className="content1 ">
+                  <p className="leftD">Discover</p>
+                  <h1 className="left">
+                    The Romance in <br />
+                    Browsing Jewellary
+                  </h1>
+                  <Link to="/shop">
+                    <button className="shop w-50 top">SHOP NOW</button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 img">
+                <div className="img1">
+                  <img
+                    src={banner1}
+                    className="d-block w-100  slide1 img-fluid right"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-item">
+            <img src={banner2} className="d-block w-100 slide2" alt="..." />
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div className="container-fluid">
+        <div className="row g-4 justify-content-center py-5">
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="card-container">
+              <Card
+                image={birthday}
+                title="Birthday Gifts"
+                description="Enjoy the beauty of birthday"
+                buttonText="Birthday Gifts"
+              />
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="card-container">
+              <Card
+                image={holiday}
+                title="Holiday Gifts"
+                description="Discover new destinations."
+                buttonText="Holiday Gifts"
+              />
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="card-container">
+              <Card
+                image={aniversary}
+                title="Aniversary Gifts"
+                description="Delicious and healthy relation."
+                buttonText="Aniversary Gifts"
+              />
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="card-container">
+              <Card
+                image={personalized}
+                title="Personalized Gifts"
+                description="Creative expressions and inspiration."
+                buttonText="Personalized Gifts"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

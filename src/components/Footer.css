@@ -1,0 +1,108 @@
+.footer {
+  background: linear-gradient(135deg, #ebb0b0, #ffb6b6);
+  color: #fff;
+  padding: 3rem 2rem 1rem;
+  margin-top: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo and About */
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Services / Links */
+.footer-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #222;
+}
+
+/* Subscribe Section */
+.footer-subscribe h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-subscribe p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.subscribe-form button {
+  background: #fff;
+  color: #ff7f7f;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: #ff4f4f;
+  color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}

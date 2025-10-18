@@ -1,0 +1,48 @@
+/* Base link */
+.navbar .nav-link {
+  position: relative;
+  display: inline-flex; /* flex makes centering easy */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 8px 18px; /* equal padding on both sides */
+  border-radius: 25px; /* pill shape */
+  text-align: center; /* center text */
+}
+
+/* Underline effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #e58b8b;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hover state */
+.navbar .nav-link:hover {
+  color: #e58b8b;
+  background-color: rgba(229, 139, 139, 0.15);
+}
+
+/* Underline expands */
+.navbar .nav-link:hover::after {
+  width: 60%;
+}
+
+/* Active link */
+.navbar .nav-link.active {
+  color: #e58b8b;
+  background-color: rgba(229, 139, 139, 0.2);
+}
+
+.navbar .nav-link.active::after {
+  width: 60%;
+}
