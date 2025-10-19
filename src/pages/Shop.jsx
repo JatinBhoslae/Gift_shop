@@ -148,6 +148,7 @@ export default function Shop() {
                   <div className="product-info">
                     <h5 className="product-name">{product.title}</h5>
                     <p className="product-price">₹{product.price}</p>
+                    <button className="buy-btn">Buy Now</button>
                   </div>
                 </div>
               ))}

@@ -1,4 +1,9 @@
-/* Base link */
+.hero-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
 .navbar .nav-link {
   position: relative;
   display: inline-flex; /* flex makes centering easy */

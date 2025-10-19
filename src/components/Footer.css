@@ -1,9 +1,12 @@
 .footer {
-  background: linear-gradient(135deg, #ebb0b0, #ffb6b6);
+  background: linear-gradient(135deg, #dda5a5, #ffb6b6);
   color: #fff;
   padding: 3rem 2rem 1rem;
   margin-top: 4rem;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .footer-container {

@@ -6,9 +6,14 @@ import birthday from "../assets/Birthday_gifts.jpg";
 import holiday from "../assets/Holiday_gifts.jpg";
 import aniversary from "../assets/Aniversary_gifts.jpg";
 import personalized from "../assets/Personalized_gifts.jpg";
-// import leaves from "../assets/leaves.png";
+import leaves from "../assets/leaves.png";
 import Card from "../components/Card";
 import { Link } from "react-router-dom";
+import copy from "../assets/copy.png";
+import lady from "../assets/lady.png";
+import gift from "../assets/surprise.png";
+import cele from "../assets/celebration.png";
+import rate from "../assets/rating.png";
 
 export default function Home() {
   return (
@@ -21,7 +26,7 @@ export default function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active containter-fluid ">
             <div className="row poition-realtive">
-              {/* <img src={leaves} alt="leaves" className="leaves-bg " /> */}
+              <img src={leaves} alt="leaves" className="leaves-bg " />
 
               <div className="col-lg-5 col-md-6 col-sm-12 a">
                 <div className="content1 ">
@@ -112,6 +117,74 @@ export default function Home() {
                 description="Creative expressions and inspiration."
                 buttonText="Personalized Gifts"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid outer">
+        <div className="happy">
+          <h1>We deliver happiness</h1>
+          <div className="happy-content">
+            <aside>
+              <img src={copy} alt="Gift" className="copy" />
+            </aside>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p style={{ color: "gray" }}>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </article>
+          </div>
+          <div className="happy-content">
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p style={{ color: "gray" }}>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </article>
+            <aside>
+              <img src={lady} alt="Gift" className="copy" />
+            </aside>
+          </div>
+        </div>
+
+        <div className="quality">
+          <div className="card">
+            <img src={gift} alt="" />
+            <h2 style={{ paddingTop: "4vh" }}>Delivering quality gifts</h2>
+            <p>Information on its origins</p>
+          </div>
+          <div className="card">
+            <img src={rate} alt="" />
+            <h2 style={{ paddingTop: "4vh" }}>Gifts for all occasions</h2>
+            <p>Variants and technical</p>
+          </div>
+          <div className="card">
+            <img src={cele} alt="" />
+            <h2 style={{ paddingTop: "4vh" }}>Great customer service</h2>
+            <p>Random Lipsum generator</p>
+          </div>
+          <div
+            className="card"
+            style={{
+              backgroundImage: `url("xyz.jpg")`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="white">
+              <p>Holiday Offers</p>
+              <h2>Sale 50% off</h2>
+              <p>Code: Jatin12</p>
             </div>
           </div>
         </div>

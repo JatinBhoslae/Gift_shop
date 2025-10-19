@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.hero-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 .slide1 {
   /* margin-left: 40vw; */
@@ -60,7 +70,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: color 0.4s ease;
-  z-index: 1; /* ensures stacking context */
+  z-index: 1;
 }
 
 .shop::before {
@@ -71,7 +81,7 @@
   width: 100%;
   height: 0;
   background-color: #dcbfb2;
-  z-index: -1; /* 👈 move behind text */
+  z-index: -1;
   transition: height 0.4s ease;
   border-radius: 6px;
 }
@@ -86,7 +96,7 @@
 
 .shop span {
   position: relative;
-  z-index: 2; /* optional, just ensures it's above */
+  z-index: 2;
 }
 /* Leaves background */
 .leaves-bg {
@@ -96,7 +106,7 @@
   width: 600px;
   transform: translateY(-50%);
   opacity: 0.9;
-  z-index: 1; /* behind banner image */
+  z-index: 1;
   pointer-events: none;
   animation: floatLeaves 5s ease-in-out infinite;
 }
@@ -127,13 +137,13 @@
 .left {
   animation: left1 2s;
 }
-.leftD{
+.leftD {
   animation: left2 1.5s;
 }
-.top{
+.top {
   animation: top 1s;
 }
-.right{
+.right {
   animation: right1 2s;
 }
 @keyframes left1 {
@@ -175,4 +185,156 @@
   100% {
     transform: scale(1);
   }
+}
+.outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  /* padding: 0 5%; */
+  gap: 20px;
+}
+
+.happy {
+  width: 80%;
+    background: linear-gradient(145deg, #f0e0e0, #f9f9f9);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.happy h1 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding-top: 5vh;
+  color: #222;
+}
+
+.happy-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.happy-content aside {
+  width: 50%;
+}
+
+.happy-content aside img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.happy-content article {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.happy-content p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #444;
+  line-height: 1;
+  padding-bottom: 50px;
+  padding-right: 25px;
+}
+
+.quality {
+  width: 20%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.quality .card {
+  background: linear-gradient(145deg, #f0e0e0, #f9f9f9);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.quality .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.quality .card img {
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.quality .card h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.quality .card p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .outer {
+    flex-direction: column;
+  }
+  aside .copy {
+    width: 100px;
+  }
+  .happy,
+  .quality {
+    width: 100%;
+  }
+  .happy {
+    padding: 0px;
+  }
+  .happy-content {
+    border-bottom: 2px dotted #bbb;
+  }
+  .happy-content p {
+    padding-top: 25px;
+    width: 100%;
+    padding-bottom: 0px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .quality {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .quality .card {
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .quality .card img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 600px) {
+  .happy-content {
+    flex-direction: column;
+  }
+  .happy-content p {
+    padding-right: 0px;
+    padding-bottom: 10px;
+  }
+  .happy-content article {
+    padding-left: 0px;
+  }
+}
+.white {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
