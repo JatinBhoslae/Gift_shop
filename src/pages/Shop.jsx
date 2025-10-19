@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Shop.css";
 import MainProducts from "../components/MainProducts";
-import { useNavigate } from "react-router-dom";
 
 export default function Shop() {
-  // Local product data
+  const location = useLocation();
+  const initialCategory = location.state?.category || "";
+
   const productData = [
     {
       id: 1,
@@ -59,7 +61,7 @@ export default function Shop() {
 
   const [products] = useState(productData);
   const [filtered, setFiltered] = useState(productData);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(initialCategory);
   const [price, setPrice] = useState(6000);
 
   // Filter products based on category and price
@@ -69,12 +71,6 @@ export default function Shop() {
     temp = temp.filter((p) => p.price <= price);
     setFiltered(temp);
   }, [category, price, products]);
-
-  const navigate = useNavigate();
-
-  const handleViewDetails = (product) => {
-    navigate(`/product/${product.id}`, { state: { product } });
-  };
 
   const categories = [
     "Garment Care",
@@ -141,10 +137,7 @@ export default function Shop() {
             <div className="product-grid">
               {filtered.map((product) => (
                 <div key={product.id} className="product-card">
-                  <div
-                    className="product-img-wrapper"
-                    onClick={() => handleViewDetails(product)}
-                  >
+                  <div className="product-img-wrapper">
                     <img
                       src={product.image}
                       alt={product.title}
@@ -158,12 +151,7 @@ export default function Shop() {
                   <div className="product-info">
                     <h5 className="product-name">{product.title}</h5>
                     <p className="product-price">₹{product.price}</p>
-                    <button
-                      className="buy-btn"
-                      onClick={() => handleViewDetails(product)}
-                    >
-                      View Details
-                    </button>
+                    <button className="buy-btn">Buy Now</button>
                   </div>
                 </div>
               ))}

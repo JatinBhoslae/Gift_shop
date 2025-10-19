@@ -35,7 +35,10 @@ export default function Home() {
                     The Romance in <br />
                     Browsing Jewellary
                   </h1>
-                  <Link to="/shop">
+                  <Link
+                    to="/shop"
+                    state={{ category: "Jewelry & Accessories" }}
+                  >
                     <button className="shop w-50 top">SHOP NOW</button>
                   </Link>
                 </div>
