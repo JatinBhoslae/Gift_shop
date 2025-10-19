@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Shop.css";
 import MainProducts from "../components/MainProducts";
+import { useNavigate } from "react-router-dom";
 
 export default function Shop() {
   // Local product data
@@ -69,6 +70,12 @@ export default function Shop() {
     setFiltered(temp);
   }, [category, price, products]);
 
+  const navigate = useNavigate();
+
+  const handleViewDetails = (product) => {
+    navigate(`/product/${product.id}`, { state: { product } });
+  };
+
   const categories = [
     "Garment Care",
     "Home & Living",
@@ -134,7 +141,10 @@ export default function Shop() {
             <div className="product-grid">
               {filtered.map((product) => (
                 <div key={product.id} className="product-card">
-                  <div className="product-img-wrapper">
+                  <div
+                    className="product-img-wrapper"
+                    onClick={() => handleViewDetails(product)}
+                  >
                     <img
                       src={product.image}
                       alt={product.title}
@@ -148,7 +158,12 @@ export default function Shop() {
                   <div className="product-info">
                     <h5 className="product-name">{product.title}</h5>
                     <p className="product-price">₹{product.price}</p>
-                    <button className="buy-btn">Buy Now</button>
+                    <button
+                      className="buy-btn"
+                      onClick={() => handleViewDetails(product)}
+                    >
+                      View Details
+                    </button>
                   </div>
                 </div>
               ))}

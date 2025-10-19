@@ -8,6 +8,7 @@ import OurStory from "./pages/OurStory";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import ProductDetail from "./components/ProductDetail";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:category?" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/blog" element={<Blog />} />
