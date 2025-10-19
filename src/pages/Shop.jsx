@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Shop.css";
 import MainProducts from "../components/MainProducts";
 
 export default function Shop() {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const initialCategory = location.state?.category || "";
 
   const productData = [
@@ -14,6 +16,7 @@ export default function Shop() {
       category: "Garment Care",
       price: 1200,
       image: "/images/shirt.jpg",
+      description: "A premium cotton shirt that redefines comfort and style.",
     },
     {
       id: 2,
@@ -21,6 +24,7 @@ export default function Shop() {
       category: "Home & Living",
       price: 800,
       image: "/images/vase.jpg",
+      description: "Elegant ceramic vase to elevate your home decor.",
     },
     {
       id: 3,
@@ -28,6 +32,7 @@ export default function Shop() {
       category: "Jewelry & Accessories",
       price: 5000,
       image: "/images/necklace.jpg",
+      description: "Beautiful gold necklace for every special occasion.",
     },
     {
       id: 4,
@@ -35,6 +40,7 @@ export default function Shop() {
       category: "Occasion Gifts",
       price: 1500,
       image: "/images/birthday.jpg",
+      description: "Surprise your loved ones with a curated birthday box.",
     },
     {
       id: 5,
@@ -42,6 +48,7 @@ export default function Shop() {
       category: "Office & Stationery",
       price: 300,
       image: "/images/notebook.jpg",
+      description: "Minimalist notebook for everyday office use.",
     },
     {
       id: 6,
@@ -49,13 +56,15 @@ export default function Shop() {
       category: "Personalised Gifts",
       price: 400,
       image: "/images/mug.jpg",
+      description: "Customized mug with your name or photo printed on it.",
     },
     {
       id: 7,
-      title: "Rectangular tray",
+      title: "Rectangular Tray",
       category: "Uncategorized",
       price: 250,
       image: "/images/tray.jpg",
+      description: "Durable and stylish tray for all occasions.",
     },
   ];
 
@@ -151,7 +160,16 @@ export default function Shop() {
                   <div className="product-info">
                     <h5 className="product-name">{product.title}</h5>
                     <p className="product-price">₹{product.price}</p>
-                    <button className="buy-btn">Buy Now</button>
+                    <button
+                      className="buy-btn"
+                      onClick={() =>
+                        navigate(`/product/${product.id}`, {
+                          state: { product },
+                        })
+                      }
+                    >
+                      View Details
+                    </button>
                   </div>
                 </div>
               ))}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import "./ProductDetail.css";
 
@@ -6,6 +6,11 @@ export default function ProductDetail() {
   const { id } = useParams();
   const location = useLocation();
   const product = location.state?.product;
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (!product) {
     return (

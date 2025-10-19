@@ -197,7 +197,7 @@
 
 .happy {
   width: 80%;
-    background: linear-gradient(145deg, #f0e0e0, #f9f9f9);
+  background: linear-gradient(145deg, #f0e0e0, #f9f9f9);
   border-radius: 12px;
   padding: 20px;
 }
@@ -292,9 +292,6 @@
   .happy {
     padding: 0px;
   }
-  .happy-content {
-    border-bottom: 2px dotted #bbb;
-  }
   .happy-content p {
     padding-top: 25px;
     width: 100%;
@@ -320,6 +317,10 @@
 @media (max-width: 600px) {
   .happy-content {
     flex-direction: column;
+    border-bottom: 2px dotted #bbb;
+  }
+  .Noborder {
+    border-bottom: none;
   }
   .happy-content p {
     padding-right: 0px;

@@ -143,7 +143,7 @@ export default function Home() {
               </p>
             </article>
           </div>
-          <div className="happy-content">
+          <div className="happy-content Noborder">
             <article>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
